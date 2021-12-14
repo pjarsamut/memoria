@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+
+<head>
+    <title>MEMORIA</title>
+    <meta charset="UTF-8">
+    <script src="https://fonts.googleapis.com/css?family=Muli&display=swap"></script>
+    <script src="https://fonts.googleapis.com/css?family=Open+Sans:400,500&display=swap"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/ef115be938.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <!--Get your own code at fontawesome.com-->
+    <style>
+        .w3-sidebar a {
+            font-family: "Roboto", sans-serif
+        }
+
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        .w3-wide {
+            font-family: "Montserrat", sans-serif;
+        }
+
+        .btn {
+            border: none;
+            color: white;
+            padding: 16px 32px;
+            text-decoration: none;
+            margin: 50px 2px;
+            text-align: center;
+            margin-left: 30%;
+        }
+
+        .form-control {
+            margin-bottom: 10px;
+            padding-bottom: 20px;
+            position: relative;
+        }
+
+        .form-control label {
+            display: inline-block;
+            margin-bottom: 5px;
+        }
+
+        .form-control input {
+            border: 2px solid #f0f0f0;
+            border-radius: 4px;
+            display: block;
+            font-family: inherit;
+            font-size: 14px;
+            padding: 10px;
+            width: 100%;
+        }
+
+        .form-control input:focus {
+            outline: 0;
+            border-color: #777;
+        }
+
+        .form-control.success input {
+            border-color: #2ecc71;
+        }
+
+        .form-control.error input {
+            border-color: #e74c3c;
+        }
+
+        .form-control i {
+            visibility: hidden;
+            position: absolute;
+            top: 40px;
+            right: 10px;
+        }
+
+        .form-control.success i.fa-check-circle {
+            color: #2ecc71;
+            visibility: visible;
+        }
+
+        .form-control.error i.fa-exclamation-circle {
+            color: #e74c3c;
+            visibility: visible;
+        }
+
+        .form-control small {
+            color: #e74c3c;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            visibility: hidden;
+        }
+
+        .form-control.error small {
+            visibility: visible;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="w3-top">
+        <div class="w3-bar w3-theme-d2 w3-left-align w3-large" style="background: #004733; color: white;">
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="My Account">
+                <img src="images/logo.png" class="w3-circle" style="height:65px;width:65px" alt="Avatar">
+            </a>
+        </div>
+    </div>
+
+    <div class="w3-display-middle" style="width:65%; margin-top: 25%;">
+        <div class="w3-bar" style="background-color: #c83e4d;">
+            <p style=" color: white;">Create Account</p>
+        </div>
+
+        <!-- Tabs -->
+        <form role="form" method="POST" id="form">
+            <div id="Flight" class="w3-container w3-white w3-padding-32;">
+                <div class="w3-row-padding" style="margin:0 -16px; margin-top: 3%;">
+
+                    <div class="w3-half form-control">
+                        <label style="color: #E55151;">First Name :</label>
+                        <input class="w3-input w3-border" style="background-color:  #FFE8E8; border-radius: 45px;"
+                            type="text" id="fname" name="fname" placeholder="">
+                        <i class="fas fa-check-circle"></i>
+                        <i class="fas fa-exclamation-circle"></i>
+                        <small>Error message</small>
+                    </div>
+
+                    <div class="w3-half form-control">
+                        <label style="color: #E55151;">Last Name :</label>
+                        <input class="w3-input w3-border" style="background-color:  #FFE8E8; border-radius: 45px;"
+                            type="text" id="lname" name="lname" placeholder="">
+                        <i class="fas fa-check-circle"></i>
+                        <i class="fas fa-exclamation-circle"></i>
+                        <small>Error message</small><br>
+
+                    </div>
+
+                    <div class="w3-half form-control">
+                        <label style="color: #E55151;">User Name :</label>
+                        <input class="w3-input w3-border" style="background-color:  #FFE8E8; border-radius: 45px;"
+                            type="text" id="uname" name="uname" placeholder="">
+                        <i class="fas fa-check-circle"></i>
+                        <i class="fas fa-exclamation-circle"></i>
+                        <small>Error message</small>
+                    </div>
+
+                    <div class="w3-half form-control">
+                        <label style="color: #E55151;">Your Email :</label>
+                        <input class="w3-input w3-border" style="background-color:  #FFE8E8; border-radius: 45px;"
+                            type="text" id="email" name="email" placeholder="">
+                        <i class="fas fa-check-circle"></i>
+                        <i class="fas fa-exclamation-circle"></i>
+                        <small>Error message</small><br>
+                    </div>
+                </div>
+                <div class="w3-half form-control">
+                    <label style="color: #E55151;">PassWord :</label>
+                    <input class="w3-input w3-border"
+                        style="background-color:  #FFE8E8; border-radius: 45px; margin:0 -16px;" type="PassWord"
+                        id="pwd" name="pwd" placeholder="">
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>Error message</small>
+                </div>
+
+                <div class="w3-half form-control">
+                    <label style="color: #E55151;">Confirm PassWord :</label>
+                    <input class="w3-input w3-border" style="background-color:  #FFE8E8; border-radius: 45px;"
+                        type="PassWord" id="cfpwd" name="cfpwd" placeholder="">
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>Error message</small>
+                </div>
+
+                <div class="form-group" style="margin-top: 10%;">
+                    <label for="syear" style="color: #E55151;">Please choose relation with the Elder :</label><br>
+                    <select class="form-control" name="ctype" id="ctype"
+                        style="color: #E55151; width: 25%; margin-top: 20px;">
+                        <option value="CT01">Admin</option>
+                        <option value="CT02">Caregiver</option>
+                        <option value="CT03">Doctor</option>
+                        <option value="CT04">Nurse</option>
+                    </select>
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>Error message</small>
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary w3-button" id="submitButton"
+                style="background-color: #c83e4d; float: center;">Insert</button>
+        </form>
+        <button class="btn btn-primary w3-button " style="background-color: black; float: center;" id="cancelButton">Cancel</button>
+
+        <!--<div class="w3-center">
+            <button type="submit" class="btn btn-primary w3-button" style="background-color: black;"
+                id="cancelButton">Cancel</button>
+
+            <button type="submit" class="btn btn-primary w3-button" style="background-color: #c83e4d; margin-left: 10%;"
+                id="nextButton">Insert</button>-->
+        <!--<input type="submit" style=" background-color: #1561AE;
+                 border: none;
+                 color: white;
+                 padding: 16px 32px;
+                 text-decoration: none;
+                 text-align: center;
+                 margin: 4px 2px;
+                 align-items: center;
+                 cursor: pointer;">-->
+        <!--</div>-->
+        <!--cursor: pointer;" value="Continue" id="nextButton">-->
+
+    </div>
+    </div>
+    </div>
+    </div>
+    <script>
+        document.getElementById("cancelButton").onclick = function () {
+            location.href = "/login";
+        };
+
+        $(document).ready(function () {
+            $("#form").on('submit', function () {
+                alert("Caregiver record is successfully inserted into the database")
+            });
+        });
+
+    </script>
+    <script>
+        const form = document.getElementById('form');
+        const fname = document.getElementById('fname');
+        const lname = document.getElementById('lname');
+        const uname = document.getElementById('uname');
+        const email = document.getElementById('email');
+        const pwd = document.getElementById('pwd');
+        const cfpwd = document.getElementById('cfpwd');
+        const ctype = document.getElementById('ctype');
+
+        form.addEventListener('input', e => {
+            e.preventDefault();
+
+            checkInputs();
+
+        });
+
+        function checkInputs() {
+            // trim to remove the whitespaces
+            const fnameValue = fname.value.trim();
+            const lnameValue = lname.value.trim();
+            const unameValue = uname.value.trim();
+            const emailValue = email.value.trim();
+            const pwdValue = pwd.value.trim();
+            const cfpwdValue = cfpwd.value.trim();
+            const ctypeValue = ctype.value.trim();
+
+            if (fnameValue === '') {
+                setErrorFor(fname, 'First Name field is required');
+            } else {
+                setSuccessFor(fname);
+            }
+
+            if (lnameValue === '') {
+                setErrorFor(lname, 'Last Name field is required');
+            } else {
+                setSuccessFor(lname);
+            }
+
+            if (unameValue === '') {
+                setErrorFor(uname, 'Username field is required');
+            } else {
+                setSuccessFor(uname);
+            }
+
+            if (emailValue === '') {
+                setErrorFor(email, 'Email field is required');
+            } else if (!isEmail(emailValue)) {
+                setErrorFor(email, 'Not a valid Email');
+            } else {
+                setSuccessFor(email);
+            }
+
+            if (pwdValue === '') {
+                setErrorFor(pwd, 'Password field is required');
+            } else {
+                setSuccessFor(pwd);
+            }
+
+            if (cfpwdValue === '') {
+                setErrorFor(cfpwd, 'Confirm Password cannot be blank');
+            } else if (pwdValue !== cfpwdValue) {
+                setErrorFor(cfpwd, 'Passwords does not match');
+            } else {
+                setSuccessFor(cfpwd);
+            }
+
+            if (ctypeValue === '') {
+                setErrorFor(ctype, 'Caregiver Type field is required');
+            } else {
+                setSuccessFor(ctype);
+            }
+        }
+
+        function setErrorFor(input, message) {
+            const formControl = input.parentElement;
+            const small = formControl.querySelector('small');
+            formControl.className = 'form-control error';
+            small.innerText = message;
+        }
+
+        function setSuccessFor(input) {
+            const formControl = input.parentElement;
+            formControl.className = 'form-control success';
+        }
+
+        function isEmail(email) {
+            return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
+        }
+
+
+
+
+
+
+    </script>
+
+    <!--<script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                $("#form").on('submit', function (e) {
+                    e.preventDefault()
+                });
+                alert("Caregiver record is successfully inserted into the database")
+            });
+        })
+
+    </script>-->
+    <!--<script>
+		$(document).ready(function(){
+			$("button").click(function(){
+				$("#form_m").on('submit', function(e){
+					e.preventDefault()
+				})
+				alert("Insert Correct!!")
+			})
+		})
+	</script>-->
+
+    <!--<script>
+		$(document).ready(function(){
+			$("#nextButton").click(function(){
+				$("#form").on('submit', function(e){
+					e.preventDefault()
+				})
+				alert("Caregiver record is successfully inserted into the database")
+                
+			})
+		})
+	</script>-->
+    <!--
+    <script type="text/javascript">
+        document.getElementById("nextButton").onclick = function () {
+            location.href = "/addElder";
+        };
+        document.getElementById("cancelButton").onclick = function () {
+            location.href = "/login";
+        };
+    </script>-->
+
+    <!--<script>
+        $(document).ready(function(){
+                $("#form").on('submit', function(){
+                    alert("Student record is successfully inserted into the database")
+                });  	  
+        });
+    </script>-->
+    <!--<script>
+        $("#form").submit(function (event) {
+            var formData = {
+                // ดึงข้อมูลจาก form มา สร้างเป็น json object
+                'fname': $("#fname").val(),
+                'lname': $("#lname").val(),
+                'email': $("#email").val(),
+                'pwd': $("#pwd").val(),
+                'CFpwd': $("#CFpwd").val(),
+            };
+
+            $.ajax({							// General Purpose for Any Method -> get, post
+                type: 'GET',
+                url: "/createAccount",
+                data: formData,
+                dataType: "json",
+                encode: true
+            }).done(function (data) {
+                alert("data -> " + JSON.stringify(data));
+                $("#result").html("a record has been successfully inserted!!!");
+            });
+            event.preventDefault();				// prevent default ไม่ให้เปลี่ยนหน้า
+        });
+    </script>-->
+</body>
+
+</html>

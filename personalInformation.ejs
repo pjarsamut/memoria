@@ -1,0 +1,237 @@
+<html>
+
+<head>
+    <title>Hometour</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <style>
+        .w3-sidebar a {
+            font-family: "Roboto", sans-serif
+        }
+
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        .w3-wide {
+            font-family: "Montserrat", sans-serif;
+        }
+
+        table,
+        td,
+        th {
+            border: 1px solid black;
+        }
+
+        td {
+            height: 50px;
+            vertical-align: bottom;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="w3-top">
+        <div class="w3-bar w3-theme-d2 w3-left-align w3-large" style="background: #004733; color: white;">
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="My Account">
+                <img src="images/logo.png" class="w3-circle" style="height:65px;width:65px" alt="Avatar">
+            </a>
+            <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-theme-d2"
+                href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+            <a href="addElder" class="w3-bar-item w3-button w3-right w3-padding-large w3-theme-d4" title="Home">
+                <i class="fa fa-home w3-margin-right"></i></a>
+            <a href="#" class="w3-bar-item w3-button  w3-right w3-hide-small w3-padding-large w3-hover-white"
+                title="Account Settings"><i class="fa fa-user"></i></a>
+            <a href="#" class="w3-bar-item w3-button  w3-right w3-hide-small w3-padding-large w3-hover-white"
+                title="Messages"><i class="fa fa-envelope"></i></a>
+            <!-- Notification -->
+            <div class="w3-dropdown-hover w3-hide-small w3-right">
+                <button class="w3-button w3-padding-large " title="Notifications"><i class="fa fa-bell"></i><span
+                        class="w3-badge w3-right w3-small w3-green">3</span></button>
+                <div class="w3-dropdown-content w3-card-4 w3-bar-block" style="width:300px">
+                    <a href="#" class="w3-bar-item w3-button">Training Set</a>
+                    <a href="#" class="w3-bar-item w3-button">Training Record</a>
+                    <a href="#" class="w3-bar-item w3-button">Personal Information</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar on small screens -->
+    <div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium w3-large">
+        <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 1</a>
+        <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 2</a>
+        <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 3</a>
+        <a href="#" class="w3-bar-item w3-button w3-padding-large">My Profile</a>
+        <br>
+        <pre>
+    </pre>
+    </div>
+
+    <!-- Sidebar/menu -->
+    <nav class="w3-sidebar w3-bar-block w3-white w3-collapse w3-top" style="z-index:3;width:250px; margin-top: 6%;"
+        id="mySidebar">
+
+        <div class="w3-container w3-display-container w3-padding-16">
+            <i onclick="w3_close()" class="fa fa-remove w3-hide-large w3-button w3-display-topright"></i>
+            <h3 class="w3-wide w3-center"><b>MEMORIA</b></h3>
+            <img src="images/profile.jpg" style="width:85%" class="w3-circle w3-hover-opacity"><br><br>
+            <a href="#" class="w3-bar-item w3-button w3-center" style="color: blue;">Alissara Rumsrimad</a>
+        </div>
+        <hr>
+        <div class="w3-padding-50 w3-large w3-text-grey" style="font-weight:bold">
+            <a href="trainingSet" class="w3-bar-item w3-button">Training Set</a>
+            <hr>
+            <a href="trainingRecord" class="w3-bar-item w3-button">Training Record</a>
+            <hr>
+            <a href="personalInformation" class="w3-bar-item w3-button">Personal Information</a>
+        </div>
+        <a href="login" class="w3-bar-item w3-button w3-padding w3-center"
+            style="background-color: #c83e4d; color: white; margin-top: 16%;">Logout</a>
+    </nav>
+
+    <div class="table-data" style="margin-top: 10%;">
+        <h6 style="margin-left: 50%; font-weight: bold;">Display Personal Information</h6>
+        <br>
+        <table class="table" style="margin-left: 20%; width: 75%; font-size: 14px;">
+            <thead class="thead-dark w3-center">
+                <tr>
+                    <th>FName</th>
+                    <th>LName</th>
+                    <th>Birthdate</th>
+                    <th>Gender</th>
+                    <th>Tel No</th>
+                    <th>Disease</th>
+                    <th>Medicine</th>
+                    <th>DrungAllergy</th>
+                    <th>Doctor</th>
+                    <th>Hospital</th>
+                    <!--<th>pUpImage</th>-->
+                    <!--<th>Edit</th>
+          <th>Delete</th>-->
+                </tr>
+            </thead>
+            <tbody>
+                <% if(userData.length!=0){ var i=1; userData.forEach(function(data){ %>
+                    <tr>
+                        <!--<td>
+            <%=i; %>
+          </td>-->
+                        <td>
+                            <%=data.pFName %>
+                        </td>
+                        <td>
+                            <%=data.pLName %>
+                        </td>
+                        <td>
+                            <%=data.pBirthDate %>
+                        </td>
+                        <td>
+                            <%=data.pGender %>
+                        </td>
+                        <td>
+                            <%=data.pTelNo %>
+                        </td>
+                        <td>
+                            <%=data.pDisease %>
+                        </td>
+                        <td>
+                            <%=data.pMedicine %>
+                        </td>
+                        <td>
+                            <%=data.pDrugAllergy %>
+                        </td>
+                        <td>
+                            <%=data.pDoctor %>
+                        </td>
+                        <td>
+                            <%=data.pHospital %>
+                        </td>
+                        <!--<td>
+                            <%=data.pUpImage %>
+                        </td>-->
+
+                        <!--<td><a href="/users/edit/<%=data.id%>">Edit</a></td>
+            <td><a href="/users/delete/<%=data.id%>">Delete</a></td>-->
+                    </tr>
+                    <% i++; }) %>
+                        <% } else{ %>
+                            <tr>
+                                <td colspan="7">No Data Found</td>
+                            </tr>
+                            <% } %>
+            </tbody>
+        </table>
+    </div>
+
+    <!--<a href="trainingRecord" style="margin-top: 10%; margin-left: 20%;">Training Record</p>-->
+    <!--<div class="w3-center" style="margin-left: 40px; margin-top: 8%; float: left;">
+    <table>
+      <tr>
+        <th>ID</th>
+        <th>Date</th>
+        <th>Training set</th>
+        <th>% of Completion</th>
+        <th>Rating</th>
+        <th>Detail Comment</th>
+        </th>
+      </tr>
+      <tr>
+        <td>#1</td>
+        <td>10/11/2021</td>
+        <td>Home tour#2</td>
+        <td>100% (10/10)</td>
+        <td><img src="images/stars.png" style="height: 60%; width: 100%;"></td>
+        <td><a href="#"><img src="images/notepad.png" style="height: 70%; width: 50%; margin-left: 25%;"></a> </td>
+      </tr>
+      <tr>
+        <td>#2</td>
+        <td>11/11/2021</td>
+        <td>Home tour#2</td>
+        <td>70% (7/10)</td>
+        <td><img src="images/stars.png" style="height: 60%; width: 100%;"></td>
+        <td><a href="#"><img src="images/notepad.png" style="height: 70%; width: 50%; margin-left: 25%;"></a></td>
+      </tr>
+      <tr>
+        <td>#3</td>
+        <td>10/11/2021</td>
+        <td>Backyard Garden</td>
+        <td>100% (5/5)</td>
+        <td><img src="images/stars.png" style="height: 60%; width: 100%;"></td>
+        <td><a href="#"><img src="images/notepad.png" style="height: 70%; width: 50%; margin-left: 25%;"></a></td>
+      </tr>
+      <tr>
+        <td>#4</td>
+        <td>10/11/2021</td>
+        <td>Home tour#1</td>
+        <td>75% (6/10)</td>
+        <td><img src="images/stars.png" style="height: 60%; width: 100%;"></td>
+        <td><a href="detailComment"><img src="images/notepad.png"
+              style="height: 70%; width: 50%; margin-left: 25%;"></a></td>
+      </tr>
+    </table>
+  </div>-->
+
+
+
+    <script type="text/javascript">
+        document.getElementById("logout").onclick = function () {
+            location.href = "/login";
+        };
+
+    </script>
+</body>
+
+</html>

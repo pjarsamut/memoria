@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html>
+<title>MEMORIA</title>
+<meta charset="UTF-8">
+<script src="https://fonts.googleapis.com/css?family=Muli&display=swap"></script>
+<script src="https://fonts.googleapis.com/css?family=Open+Sans:400,500&display=swap"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://kit.fontawesome.com/ef115be938.js" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<!--Get your own code at fontawesome.com-->
+<style>
+  .w3-sidebar a {
+    font-family: "Roboto", sans-serif
+  }
+
+  body,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  .w3-wide {
+    font-family: "Montserrat", sans-serif;
+  }
+
+  .form-control {
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+    position: relative;
+  }
+
+  .form-control label {
+    display: inline-block;
+    margin-bottom: 5px;
+  }
+
+  .form-control input {
+    border: 2px solid #f0f0f0;
+    border-radius: 4px;
+    display: block;
+    font-family: inherit;
+    font-size: 14px;
+    padding: 10px;
+    width: 100%;
+  }
+
+  .form-control input:focus {
+    outline: 0;
+    border-color: #777;
+  }
+
+  .form-control.success input {
+    border-color: #2ecc71;
+  }
+
+  .form-control.error input {
+    border-color: #e74c3c;
+  }
+
+  .form-control i {
+    visibility: hidden;
+    position: absolute;
+    top: 40px;
+    right: 10px;
+  }
+
+  .form-control.success i.fa-check-circle {
+    color: #2ecc71;
+    visibility: visible;
+  }
+
+  .form-control.error i.fa-exclamation-circle {
+    color: #e74c3c;
+    visibility: visible;
+  }
+
+  .form-control small {
+    color: #e74c3c;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    visibility: hidden;
+  }
+
+  .form-control.error small {
+    visibility: visible;
+  }
+</style>
+
+<body class="w3-content" style="max-width:100%">
+  <div class="w3-top">
+    <div class="w3-bar w3-theme-d2 w3-left-align w3-large" style="background:  #004733; color: white;">
+      <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="My Account">
+        <img src="images/logo.png" class="w3-circle" style="height:65px;width:65px" alt="Avatar">
+      </a>
+      <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-theme-d2"
+        href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+      <a href="addElder" class="w3-bar-item w3-button w3-right w3-padding-large w3-theme-d4" title="Home"><i
+          class="fa fa-home w3-margin-right"></i></a>
+      <a href="#" class="w3-bar-item w3-button  w3-right w3-hide-small w3-padding-large w3-hover-white"
+        title="Account Settings"><i class="fa fa-user"></i></a>
+      <a href="#" class="w3-bar-item w3-button  w3-right w3-hide-small w3-padding-large w3-hover-white"
+        title="Messages"><i class="fa fa-envelope"></i></a>
+      <div class="w3-dropdown-hover w3-hide-small w3-right">
+        <button class="w3-button w3-padding-large w3-right" title="Notifications"><i class="fa fa-bell"></i><span
+            class="w3-badge w3-right w3-small w3-green">3</span></button>
+        <div class="w3-dropdown-content w3-card-4 w3-bar-block" style="width:300px">
+          <a href="#" class="w3-bar-item w3-button">Training Set</a>
+          <a href="#" class="w3-bar-item w3-button">Training Record</a>
+          <a href="#" class="w3-bar-item w3-button">Personal Information</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium w3-large">
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 1</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 2</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 3</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">My Profile</a>
+    <br>
+    <pre>
+         </pre>
+  </div>
+
+  <!-- Sidebar/menu -->
+  <nav class="w3-sidebar w3-bar-block w3-white w3-collapse w3-top" style="z-index:3;width:250px; margin-top: 6%;"
+    id="mySidebar">
+
+    <div class="w3-container w3-display-container w3-padding-16">
+      <i onclick="w3_close()" class="fa fa-remove w3-hide-large w3-button w3-display-topright"></i>
+      <h3 class="w3-wide w3-center"><b>MEMORIA</b></h3>
+      <img src="images/profile.jpg" style="width:85%" class="w3-circle w3-hover-opacity"><br><br>
+      <a href="#" class="w3-bar-item w3-button w3-center" style="color: blue;">Alissara Rumsrimad</a>
+    </div>
+    <hr>
+    <div class="w3-padding-50 w3-large w3-text-grey" style="font-weight:bold">
+      <a href="trainingSet" class="w3-bar-item w3-button">Training Set</a>
+      <hr>
+      <a href="trainingRecord" class="w3-bar-item w3-button">Training Record</a>
+      <hr>
+      <a href="personalInformation" class="w3-bar-item w3-button">Personal Information</a>
+    </div>
+    <a href="login" class="w3-bar-item w3-button w3-padding w3-center"
+      style="background-color: #c83e4d; color: white; margin-top: 16%;">Logout</a>
+  </nav>
+
+  <!-- Overlay effect when opening sidebar on small screens -->
+  <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu"
+    id="myOverlay"></div>
+
+  <!-- !PAGE CONTENT! -->
+  <div class="w3-main" style="margin-left:250px">
+
+    <!-- Push down content on small screens -->
+    <div class="w3-hide-large" style="margin-top:83px"></div>
+
+
+    <div class="w3-display" style="width:65%;  margin-left: 65px; margin-top: 150px;">
+      <div class="w3-bar" style="background-color: white;">
+        <h4 style="margin-left: 50%;">Information of The Elder</h4>
+      </div>
+
+      <!-- Tabs -->
+      <div id="Flight" class="w3-container w3-white w3-padding-32 myLink">
+        <div class="w3-row-padding" style="background-color: gainsboro; 
+            color: black; border-radius: 20px; padding: 4%; margin-left: 15%; width: 800px;">
+
+          <form class="form" id="form" method="POST">
+            <div class="form-control">
+              <label>Identification Card Number :</label>
+              <input class="w3-input w3-border" style="border-radius: 45px;" type="text" id="idcard" name="idcard"
+                placeholder="">
+              <i class="fas fa-check-circle"></i>
+              <i class="fas fa-exclamation-circle"></i>
+              <small>Error message</small>
+            </div>
+
+            <div class="w3-half form-control">
+              <label>First Name :</label>
+              <input id="fname" name="fname" class="w3-input w3-border" style="border-radius: 45px;" type="text"
+                placeholder="">
+              <i class="fas fa-check-circle"></i>
+              <i class="fas fa-exclamation-circle"></i>
+              <small>Error message</small>
+            </div>
+
+            <div class="w3-half form-control">
+              <label>Last Name :</label>
+              <input id="lname" name="lname" class="w3-input w3-border" style="border-radius: 45px;" type="text"
+                placeholder="">
+              <i class="fas fa-check-circle"></i>
+              <i class="fas fa-exclamation-circle"></i>
+              <small>Error message</small>
+            </div>
+
+            <div class="w3-half form-control">
+              <label>Date Of Birth :</label>
+              <input id="birthdate" name="birthdate" class="w3-input w3-border" style="border-radius: 45px;" type="date"
+                placeholder="">
+              <i class="fas fa-check-circle"></i>
+              <i class="fas fa-exclamation-circle"></i>
+              <small>Error message</small>
+            </div>
+
+            <div class="w3-half form-control">
+              <label>Gender :</label>
+              <select class="w3-input w3-border" id="gender" name="gender" style="border-radius: 45px;" type="text"
+                placeholder="">
+                <option value="">-- Please Select --</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+              </select>
+              <i class="fas fa-check-circle"></i>
+              <i class="fas fa-exclamation-circle"></i>
+              <small>Error message</small>
+            </div>
+
+            <div class="form-control">
+              <label>Tel No :</label>
+              <input id="telno" name="telno" class="w3-input w3-border" style="border-radius: 45px;" type="tel"
+                placeholder="">
+            </div>
+
+            <div class="form-control">
+              <label>Disease :</label>
+              <input id="disease" name="disease" class="w3-input w3-border" style="border-radius: 45px;" type="text"
+                placeholder="">
+              <i class="fas fa-check-circle"></i>
+              <i class="fas fa-exclamation-circle"></i>
+              <small>Error message</small>
+            </div>
+
+            <div class="form-control">
+              <label>Medicine :</label>
+              <input id="medicine" name="medicine" class="w3-input w3-border" style="border-radius: 45px;" type="text"
+                placeholder="">
+              <i class="fas fa-check-circle"></i>
+              <i class="fas fa-exclamation-circle"></i>
+              <small>Error message</small>
+            </div>
+
+            <div class="form-control">
+              <label>Drug Allergy :</label>
+              <input id="drugallergy" name="drugallergy" class="w3-input w3-border" style="border-radius: 45px;"
+                type="text" placeholder="">
+              <i class="fas fa-check-circle"></i>
+              <i class="fas fa-exclamation-circle"></i>
+              <small>Error message</small>
+            </div>
+
+            <div class="form-control">
+              <label>Doctor Name :</label>
+              <input id="doctor" name="doctor" class="w3-input w3-border" style="border-radius: 45px;" type="text"
+                placeholder="">
+              <i class="fas fa-check-circle"></i>
+              <i class="fas fa-exclamation-circle"></i>
+              <small>Error message</small>
+
+            </div>
+
+            <div class="w3-half form-control">
+              <label>Hospital :</label>
+              <input id="hospital" name="hospital" class="w3-input w3-border" style="border-radius: 45px;" type="text"
+                placeholder="">
+              <i class="fas fa-check-circle"></i>
+              <i class="fas fa-exclamation-circle"></i>
+              <small>Error message</small>
+            </div>
+
+            <div class="form-control w3-center w3-half">
+              <label for="pImage" class="col-md-3 control-label">Profile Image</label>
+              <div class="col-sm-9">
+                <input class="form-control" type="file" name="uploaded_image" id='uploaded_image' accept="" />
+              </div>
+
+              <div class="w3-center">
+                <!--<button>Submit</button>-->
+                <input class="w3-button" onclick='handleSubmit()'
+                  style="background-color: black; color: white; margin-top: 5%;" type="submit" value="finish">
+              </div>
+          </form>
+        </div>
+
+        <!-- <script>
+          $(document).ready(function () {
+            $("#form").on('submit', function () {
+              alert("Patient record is successfully inserted into the database")
+            });
+          });
+        </script> -->
+        <script>
+          const form = document.getElementById('form');
+          const idcard = document.getElementById('idcard');
+          const fname = document.getElementById('fname');
+          const lname = document.getElementById('lname');
+          const birthdate = document.getElementById('birthdate');
+          const gender = document.getElementById('gender');
+          const disease = document.getElementById('disease');
+          const doctor = document.getElementById('doctor');
+          const hospital = document.getElementById('hospital');
+          const uploaded_image = document.getElementById('uploaded_image');
+
+
+          form.addEventListener('input', e => {
+            e.preventDefault();
+
+            checkInputs();
+
+          });
+
+          function checkInputs() {
+            // trim to remove the whitespaces
+            const idcardValue = idcard.value.trim();
+            const fnameValue = fname.value.trim();
+            const lnameValue = lname.value.trim();
+            const birthdateValue = birthdate.value.trim();
+            const genderValue = gender.value.trim();
+            const diseaseValue = disease.value.trim();
+            const doctorValue = doctor.value.trim();
+            const hospitalValue = hospital.value.trim();
+            const uploaded_imageValue = uploaded_image.value.trim();
+
+            if (idcardValue === '') {
+              setErrorFor(idcard, 'ID Card field is required');
+            } else {
+              setSuccessFor(idcard);
+            }
+
+            if (fnameValue === '') {
+              setErrorFor(fname, 'First Name field is required');
+            } else {
+              setSuccessFor(fname);
+            }
+
+            if (lnameValue === '') {
+              setErrorFor(lname, 'Last Name field is required');
+            } else {
+              setSuccessFor(lname);
+            }
+
+            if (birthdateValue === '') {
+              setErrorFor(birthdate, 'Birthdate field is required');
+            } else {
+              setSuccessFor(birthdate);
+            }
+
+            if (genderValue === '') {
+              setErrorFor(gender, 'Gender field is required');
+            } else {
+              setSuccessFor(gender);
+            }
+            if (diseaseValue === '') {
+              setErrorFor(disease, 'Disease field is required');
+            } else {
+              setSuccessFor(disease);
+            }
+            if (doctorValue === '') {
+              setErrorFor(doctor, 'Doctor field is required');
+            } else {
+              setSuccessFor(doctor);
+            }
+            if (hospitalValue === '') {
+              setErrorFor(hospital, 'Hospital field is required');
+            } else {
+              setSuccessFor(hospital);
+            }
+            if (uploaded_imageValue === '') {
+              setErrorFor(uploaded_image, 'Image field is required');
+            } else {
+              setSuccessFor(uploaded_image);
+            }
+          }
+
+          function setErrorFor(input, message) {
+            const formControl = input.parentElement;
+            const small = formControl.querySelector('small');
+            formControl.className = 'form-control error';
+            small.innerText = message;
+          }
+
+          function setSuccessFor(input) {
+            const formControl = input.parentElement;
+            formControl.className = 'form-control success';
+          }
+
+          function handleSubmit() {
+            let form = document.querySelector('#form')
+            const data = new FormData()
+            form.addEventListener('submit', function (e) {
+              e.preventDefault()
+            })
+            let datas = Object.values(form).reduce((obj, field) => { obj[field.name] = field.value; return obj }, {})
+            Object.entries(datas).forEach(([key, value]) => data.append(key, value))
+            const uploaded_image = document.getElementById('uploaded_image').files[0]
+            data.append('uploaded_image', uploaded_image)
+            // for (var value of data.values()) {
+            // console.log('falue', value);
+            // }
+            $('#form').submit(function (e) {
+              $.ajax({
+                type: 'POST',
+                url: "http://localhost:3000/infoElders/infoElders",
+                data: data,
+                processData: false,
+                contentType: false
+              }).done(function (data) {
+                // ส่งเสร็จให้ขึ้นว่าไร
+                //alert('test')
+                alert('The Elder record is successfully inserted into the database')
+                location.href = "addElder";
+              })
+            })
+          }
+        </script>
+
+        <!--<script type="text/javascript">
+          document.getElementById("myButton").onclick = function () {
+            location.href = "addElder";
+          }
+          $("#form1").submit(function (event) {
+            var formData = {
+              'pName': $("#pName").val(),
+              'pDoctor': $("#pDoctor").val(),
+              'pHospital': $("#pHospital").val(),
+              'pDrungAllergy': $("#pDrungAllergy").val(),
+              'pBirthday': $("#pBirthday").val(),
+              'pDisease': $("#pDisease").val(),
+            };
+            $.ajax({
+              type: 'GET',
+              url: "/patient",
+              data: formData,
+              dataType: "json",
+              encode: true
+            }).done(function (data) {
+              alert("data -> " + JSON.stringify(date));
+              $('#result').html("a record has been successfully inserted!!");
+            });
+            event.preventDefault();
+          });
+        </script>-->
+</body>
+
+</html>

@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="https://kit.fontawesome.com/ef115be938.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <style>
+        div.exerCate {
+            margin-right: 10%;
+            margin-top: 10%;
+            text-align: right;
+        }
+
+        div.files {
+            margin: 5px;
+            border: 1px solid #ccc;
+            float: left;
+            width: 180px;
+            margin-left: 30%;
+        }
+
+        div.files:hover {
+            border: 1px solid #777;
+        }
+
+        div.files img {
+            width: 100%;
+            height: auto;
+        }
+
+        div.text {
+            padding: 15px;
+            text-align: center;
+        }
+
+        div.gallery {
+            margin: 5px;
+            margin-top: 5%;
+            margin-right: 60px;
+            border: 1px solid #ccc;
+            float: left;
+            width: 180px;
+        }
+
+        div.gallery:hover {
+            border: 1px solid #777;
+        }
+
+        div.gallery img {
+            width: 100%;
+            height: auto;
+        }
+
+        div.media {
+            height: 100px;
+            width: 100px;
+            margin-left: 20%;
+            padding: 10%;
+        }
+
+        div.desc {
+            text-align: center;
+        }
+
+        div.bar {
+            margin-top: 7%;
+            color: indigo;
+        }
+    </style>
+    <!--Get your own code at fontawesome.com-->
+</head>
+
+<body>
+    <div class="w3-top">
+        <div class="w3-bar w3-theme-d2 w3-left-align w3-large" style="background:  #004733; color: white;">
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="My Account">
+                <img src="images/logo.png" class="w3-circle" style="height:65px;width:65px" alt="Avatar">
+            </a>
+            <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-theme-d2"
+                href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+            <a href="addElder" class="w3-bar-item w3-button w3-right w3-padding-large w3-theme-d4" title="Home">
+                <i class="fa fa-home w3-margin-right"></i></a>
+            <a href="#" class="w3-bar-item w3-button  w3-right w3-hide-small w3-padding-large w3-hover-white"
+                title="Account Settings"><i class="fa fa-user"></i></a>
+            <a href="#" class="w3-bar-item w3-button  w3-right w3-hide-small w3-padding-large w3-hover-white"
+                title="Messages"><i class="fa fa-envelope"></i></a>
+            <!-- Notification -->
+            <div class="w3-dropdown-hover w3-hide-small w3-right">
+                <button class="w3-button w3-padding-large " title="Notifications"><i class="fa fa-bell"></i><span
+                        class="w3-badge w3-right w3-small w3-green">3</span></button>
+                <div class="w3-dropdown-content w3-card-4 w3-bar-block" style="width:300px">
+                    <a href="#" class="w3-bar-item w3-button">Training Set</a>
+                    <a href="#" class="w3-bar-item w3-button">Training Record</a>
+                    <a href="#" class="w3-bar-item w3-button">Personal Information</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar on small screens -->
+    <div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium w3-large">
+        <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 1</a>
+        <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 2</a>
+        <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 3</a>
+        <a href="#" class="w3-bar-item w3-button w3-padding-large">My Profile</a>
+        <br>
+        <pre>
+        </pre>
+    </div>
+
+    <div class="bar">
+        <a href="trainingSet" class="w3-left" style="margin-left: 25%;">Training Sets</a>
+        <label class="w3-left" style="margin-left: 20px;">></label>
+        <a href="hometour01" class="w3-left" style="margin-left: 20px;">House Tour #1</a>
+        <label class="w3-left" style="margin-left: 20px;">></label>
+        <a href="addMemoryExercise" class="w3-left" style="margin-left: 20px;">Add Memory Exercise</a>
+    </div>
+
+    <!--<button class="w3-right" style="margin-right: 5%;">SAVE</button>-->
+
+    <!-- Sidebar/menu -->
+    <nav class="w3-sidebar w3-bar-block w3-white w3-collapse w3-top" style="z-index:3;width:250px; margin-top: 6%;"
+        id="mySidebar">
+
+        <div class="w3-container w3-display-container w3-padding-16">
+            <i onclick="w3_close()" class="fa fa-remove w3-hide-large w3-button w3-display-topright"></i>
+            <h3 class="w3-wide w3-center"><b>MEMORIA</b></h3>
+            <img src="images/profile.jpg" style="width:85%" class="w3-circle w3-hover-opacity"><br><br>
+            <a href="#" class="w3-bar-item w3-button w3-center" style="color: blue;">Alissara Rumsrimad</a>
+        </div>
+        <hr>
+        <div class="w3-padding-50 w3-large w3-text-grey" style="font-weight:bold">
+            <a href="trainingSet" class="w3-bar-item w3-button">Training Set</a>
+            <hr>
+            <a href="trainingRecord" class="w3-bar-item w3-button">Training Record</a>
+            <hr>
+            <a href="personalInformation" class="w3-bar-item w3-button">Personal Information</a>
+        </div>
+        <a href="login" class="w3-bar-item w3-button w3-padding w3-center"
+            style="background-color: #c83e4d; color: white; margin-top: 16%;">Logout</a>
+    </nav>
+
+    <!--<div class="gallery" style="margin-left: 30%;">-->
+    <form role="form" method="POST" id="form">
+        <input class="w3-button w3-right" onclick='handleSubmit() '
+            style="background-color: black; color: white; margin-top: 5%; margin-right: 5%;" type="submit" value="SAVE">
+        <div class="w3-main">
+            <div class="w3-row w3-padding-64">
+                <div class="w3-twothird w3-container">
+                    <p style="margin-left: 55%;">Exercise Image</p>
+                    <img src="images/bedroom.jpg" style="width: 30%; margin-left: 45%;" class=" w3-hover-opacity">
+                    <!--<button type="button" style="margin-top: 10px; margin-left: 57%; width: 70px;">Edit</button>-->
+
+                    <input class="form-control" style="margin-top: 10px; margin-left: 52%; width: auto;" type="file"
+                        name="uploaded_image" id='uploaded_image' accept="" />
+
+                </div>
+
+                <div class="w3-third w3-container">
+                    <p class="w3-padding-large w3-padding-20 w3-left-align" style="margin-top: 15%; margin-left: 40px;">
+                        Exercise Category : Place</p>
+                    <label for="title" style="margin-left: 45px;">Title :</label>
+                    <input type="text" size="15" id="title" name="title"><br><br>
+                    <label for="title">Beacon ID :</label>
+                    <input type="text" size="15" id="beacon" name="beacon">
+                </div>
+
+            </div>
+        </div>
+    </form>
+
+    <hr style="margin-top: 0%;">
+    <button class="w3-right" style="margin-top: 20px; margin-right: 5%;">+ Memory Object</button>
+
+    <div class="scrollmenu" id="nextButton">
+        <div class="gallery" style="margin-left: 24%;">
+            <div class="media">
+                <a target="_blank" href="video.png">
+                    <img src="images/video.png" alt="Video">
+                </a>
+            </div>
+            <hr style="height:1px; background-color:lightgrey; margin-top: auto;">
+            <div class="desc">
+                <p>Video Files</p>
+            </div>
+        </div>
+
+        <div class="gallery">
+            <div class="media">
+                <a target="_blank" href="photo.png">
+                    <img src="images/photo.png" alt="Photo">
+                </a>
+            </div>
+            <hr style="height:1px; background-color:lightgrey; margin-top: auto;">
+            <div class="desc">
+                <p>Photo</p>
+            </div>
+        </div>
+
+        <div class="gallery">
+            <div class="media">
+                <a target="_blank" href="sound.png">
+                    <img src="images/sound.png" alt="Sound">
+                </a>
+            </div>
+            <hr style="height:1px; background-color:lightgrey; margin-top: auto;">
+            <div class="desc">
+                <p>Sound</p>
+            </div>
+        </div>
+        <div class="gallery">
+            <div class="media">
+                <a target="_blank" href="text.png">
+                    <img src="images/text.png" alt="Text">
+                </a>
+            </div>
+            <hr style="height:1px; background-color:lightgrey; margin-top: auto;">
+            <div class="desc">
+                <p>Text</p>
+            </div>
+        </div>
+
+    </div>
+    <script type="text/javascript">
+        document.getElementById("nextButton").onclick = function () {
+            location.href = "/addMedia";
+        };
+    </script>
+    <script>
+        function handleSubmit() {
+            let form = document.querySelector('#form')
+            const data = new FormData()
+            form.addEventListener('submit', function (e) {
+                e.preventDefault()
+            })
+            let datas = Object.values(form).reduce((obj, field) => { obj[field.name] = field.value; return obj }, {})
+            Object.entries(datas).forEach(([key, value]) => data.append(key, value))
+            const uploaded_image = document.getElementById('uploaded_image').files[0]
+            data.append('uploaded_image', uploaded_image)
+            // for (var value of data.values()) {
+            //   console.log('falue', value);
+            // }
+            $('#form').submit(function (e) {
+                $.ajax({
+                    type: 'POST',
+                    url: "http://localhost:3000/addMemoryExercise/addMemoryExercise",
+                    data: data,
+                    processData: false,
+                    contentType: false
+                }).done(function (data) {
+                    // ส่งเสร็จให้ขึ้นว่าไร
+                    //alert('test')
+                    alert('The Exercise Image is successfully inserted into the database')
+                })
+            })
+        }
+    </script>
+</body>
+
+</html>

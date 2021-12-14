@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<title>MEMORIA</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://kit.fontawesome.com/ef115be938.js" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<!--Get your own code at fontawesome.com-->
+<style>
+    .w3-sidebar a {
+        font-family: "Roboto", sans-serif
+    }
+
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    .w3-wide {
+        font-family: "Montserrat", sans-serif;
+    }
+
+    .vl {
+
+        border-left: 4px solid #B0AFB3;
+        height: 50px;
+        margin-left: 70px;
+    }
+
+    .box__dragndrop,
+    .box__uploading,
+    .box__success,
+    .box__error {
+        display: none;
+    }
+
+    .box.has-advanced-upload {
+        background-color: white;
+        outline: 2px dashed black;
+        outline-offset: -10px;
+    }
+
+    .box.has-advanced-upload .box__dragndrop {
+        display: inline;
+    }
+
+    .box.is-dragover {
+        background-color: grey;
+    }
+</style>
+
+<body class="w3-content" style="max-width:100%">
+
+    <div class="w3-top">
+        <div class="w3-bar w3-theme-d2 w3-left-align w3-large" style="background:  #004733; color: white;">
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="My Account">
+                <img src="images/logo.png" class="w3-circle" style="height:65px;width:65px" alt="Avatar">
+            </a>
+            <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-theme-d2"
+                href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+            <a href="addElder" class="w3-bar-item w3-button w3-right w3-padding-large w3-theme-d4" title="Home">
+                <i class="fa fa-home w3-margin-right"></i></a>
+            <a href="#" class="w3-bar-item w3-button  w3-right w3-hide-small w3-padding-large w3-hover-white"
+                title="Account Settings"><i class="fa fa-user"></i></a>
+            <a href="#" class="w3-bar-item w3-button  w3-right w3-hide-small w3-padding-large w3-hover-white"
+                title="Messages"><i class="fa fa-envelope"></i></a>
+            <!-- Notification -->
+            <div class="w3-dropdown-hover w3-hide-small w3-right">
+                <button class="w3-button w3-padding-large " title="Notifications"><i class="fa fa-bell"></i><span
+                        class="w3-badge w3-right w3-small w3-green">3</span></button>
+                <div class="w3-dropdown-content w3-card-4 w3-bar-block" style="width:300px">
+                    <a href="#" class="w3-bar-item w3-button">Training Set</a>
+                    <a href="#" class="w3-bar-item w3-button">Training Record</a>
+                    <a href="#" class="w3-bar-item w3-button">Personal Information</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Sidebar/menu -->
+    <nav class="w3-sidebar w3-bar-block w3-white w3-collapse w3-top" style="z-index:3;width:250px; margin-top: 6%;"
+        id="mySidebar">
+
+        <div class="w3-container w3-display-container w3-padding-16">
+            <i onclick="w3_close()" class="fa fa-remove w3-hide-large w3-button w3-display-topright"></i>
+            <h3 class="w3-wide w3-center"><b>MEMORIA</b></h3>
+            <img src="images/profile.jpg" style="width:85%" class="w3-circle w3-hover-opacity"><br><br>
+            <a href="#" class="w3-bar-item w3-button w3-center" style="color: blue;">Alissara Rumsrimad</a>
+        </div>
+        <hr>
+        <div class="w3-padding-50 w3-large w3-text-grey" style="font-weight:bold">
+            <a href="trainingSet" class="w3-bar-item w3-button">Training Set</a>
+            <hr>
+            <a href="trainingRecord" class="w3-bar-item w3-button">Training Record</a>
+            <hr>
+            <a href="personalInformation" class="w3-bar-item w3-button">Personal Information</a>
+        </div>
+        <a href="login" class="w3-bar-item w3-button w3-padding w3-center"
+            style="background-color: #c83e4d; color: white; margin-top: 16%;">Logout</a>
+    </nav>
+
+    <!-- Top menu on small screens -->
+    <header class="w3-bar w3-top w3-hide-large w3-xlarge" style="background-color: maroon;">
+        <div class="w3-bar-item w3-padding-24 w3-wide">MEMORIA</div>
+        <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding-24 w3-right" onclick="w3_open()"><i
+                class="fa fa-bars"></i></a>
+    </header>
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu"
+        id="myOverlay"></div>
+
+    <!-- !PAGE CONTENT! -->
+    <div class="w3-main" style="margin-left:250px">
+
+        <!-- Push down content on small screens -->
+        <div class="w3-hide-large" style="margin-top:83px"></div>
+
+        <!-- Top header -->
+        <header class="w3-container w3-xlarge">
+            <p class="w3-center" style="background-color: maroon; color: white;">MEMORIA</p>
+        </header>
+
+        <div class="w3-container w3-center w3-card w3-round w3-margin" style="background-color: #FFE8E8;"><br>
+            <h4 style="color: maroon;">ระเบียงหน้าบ้าน</h4><br>
+            <div class="w3-center">
+                <!--<hr class="w3-clear">-->
+                <div class="w3-display w3-center w3-padding w3-hide-small" style="width:90%; height: 80%;">
+                    <div class="w3-white  w3-opacity w3-hover-opacity-off w3-padding-large w3-round-large">
+                        <!-- Automatic Slideshow Images -->
+                        <div class="mySlides w3-display-container w3-center">
+                            <img src="images/terrace01.jpg" style="width: 60%; height: 60%;">
+                            <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+                                <h3>This is a Terrace</h3>
+                                <p><b>10.11.2021</b></p>
+                            </div>
+                        </div>
+                        <div class="mySlides w3-display-container w3-center">
+                            <img src="images/terrace02.jpg" style="width: 60%; height: 60%;">
+                            <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+                                <h3>This is a Terrace</h3>
+                                <p><b>14.11.2021</b></p>
+                            </div>
+                        </div>
+                        <div class="mySlides w3-display-container w3-center">
+                            <img src="images/terrace03.jpg" style="width: 60%; height: 60%;">
+                            <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+                                <h3>This is a Terrace</h3>
+                                <p><b>18.11.2021</b></p>
+                            </div>
+                        </div>
+                    </div>
+                    <form role="form" method="POST" id="form">
+                        <input type="file" name="uploaded_image" id="uploaded_image" accept="image/*"> <label
+                            for="fileupload"></label>
+                        <button type="submit" class="w3-button" value="Save" id="saveButton" onclick='handleSubmit()'
+                            style="background-color: #c83e4d; color: white; width: 80px; margin-left: 5%;">Save</button>
+
+                    </form>
+                    <div class="" style="margin-top: 5%;">
+                        <button class="w3-button" type="submit" value="delete"
+                            style="background-color: black; color: white; margin-left: 0%;"
+                            id="cancelButton">Cancel</button>
+
+                        <!--<input type="file" name="upfile" value="Edit" style="background-color: blue; color: white;">-->
+                    </div>
+
+                </div>
+
+            </div>
+
+            <script>
+                document.getElementById("cancelButton").onclick = function () {
+                    location.href = "/hometour01";
+                };
+
+                // Automatic Slideshow - change image every 2 seconds
+                var myIndex = 0;
+                carousel();
+
+                function carousel() {
+                    var i;
+                    var x = document.getElementsByClassName("mySlides");
+                    for (i = 0; i < x.length; i++) {
+                        x[i].style.display = "none";
+                    }
+                    myIndex++;
+                    if (myIndex > x.length) { myIndex = 1 }
+                    x[myIndex - 1].style.display = "block";
+                    setTimeout(carousel, 2000);
+                }
+
+
+
+
+                function handleSubmit() {
+                    let form = document.querySelector('#form')
+                    const data = new FormData()
+                    form.addEventListener('submit', function (e) {
+                        e.preventDefault()
+                    })
+                    let datas = Object.values(form).reduce((obj, field) => { obj[field.name] = field.value; return obj }, {})
+                    Object.entries(datas).forEach(([key, value]) => data.append(key, value))
+                    const uploaded_image = document.getElementById('uploaded_image').files[0]
+                    data.append('uploaded_image', uploaded_image)
+                    // for (var value of data.values()) {
+                    //   console.log('falue', value);
+                    // }
+                    $('#form').submit(function (e) {
+                        $.ajax({
+                            type: 'POST',
+                            url: "http://localhost:3000/editExercise01/editExercise01",
+                            data: data,
+                            processData: false,
+                            contentType: false
+                        }).done(function (data) {
+                            // ส่งเสร็จให้ขึ้นว่าไร
+                            //alert('test')
+                            alert('Exercise 1 is successfully inserted into the database')
+                            location.href = "/hometour01";
+                        })
+                    })
+                }
+            </script>
+
+</body>
+
+</html>

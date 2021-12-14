@@ -1,0 +1,172 @@
+<html>
+
+<head>
+  <title>MEMORIA</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://kit.fontawesome.com/ef115be938.js" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <!--Get your own code at fontawesome.com-->
+  <style>
+    .w3-sidebar a {
+      font-family: "Roboto", sans-serif
+    }
+
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    .w3-wide {
+      font-family: "Montserrat", sans-serif;
+    }
+
+    .card {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      transition: 0.3s;
+      width: 40%;
+      border-radius: 5px;
+    }
+
+    div.gallery {
+      border: 1px solid #ccc;
+      float: left;
+      width: 300px;
+      margin-top: 10%;
+      margin-left: 5%;
+      margin-right: 5%;
+      background-color: #FFF0DF;
+      font-weight: bold;
+    }
+
+    div.gallery:hover {
+      border: 1px solid #777;
+    }
+
+    div.gallery img {
+      width: 100%;
+      height: auto;
+    }
+
+    div.desc {
+      padding: 15px;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <div class="w3-top">
+    <div class="w3-bar w3-theme-d2 w3-left-align w3-large" style="background:  #004733; color: white;">
+      <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="My Account">
+        <img src="images/logo.png" class="w3-circle" style="height:65px;width:65px" alt="Avatar">
+      </a>
+      <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-theme-d2"
+        href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+      <a href="addElder" class="w3-bar-item w3-button w3-right w3-padding-large w3-theme-d4" title="Home"><i
+          class="fa fa-home w3-margin-right"></i></a>
+      <a href="#" class="w3-bar-item w3-button  w3-right w3-hide-small w3-padding-large w3-hover-white"
+        title="Account Settings"><i class="fa fa-user"></i></a>
+      <a href="#" class="w3-bar-item w3-button  w3-right w3-hide-small w3-padding-large w3-hover-white"
+        title="Messages"><i class="fa fa-envelope"></i></a>
+      <div class="w3-dropdown-hover w3-hide-small w3-right">
+        <button class="w3-button w3-padding-large w3-right" title="Notifications"><i class="fa fa-bell"></i><span
+            class="w3-badge w3-right w3-small w3-green">3</span></button>
+        <div class="w3-dropdown-content w3-card-4 w3-bar-block" style="width:300px">
+          <a href="#" class="w3-bar-item w3-button">Training Set</a>
+          <a href="#" class="w3-bar-item w3-button">Training Record</a>
+          <a href="#" class="w3-bar-item w3-button">Personal Information</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium w3-large">
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 1</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 2</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 3</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">My Profile</a>
+    <br>
+  </div>
+  <!--<div class="w3-row-padding w3-center w3-margin-top">
+    <div class="w3-third">
+      <div class="card">
+        <img src="10.jpg" alt="Avatar" style="width:50%">
+        <div class="container">
+          <h4><b>Usar BoonPrasert</b></h4>
+          <p>House wife</p>
+        </div>
+        </div>
+      </div>-->
+  <button id="addElderButton" class="w3 right w3-button" style="margin-top: 8%; background-color: #F8C0C8; 
+          border-radius: 10px; border: 1px solid #777;">+ADD ELDER</button>
+  
+  <div class="gallery">
+    <a target="_blank">
+      <img src="images/elder01.jpg" alt="Cinque Terre" width="1000" height="600">
+    </a>
+    <div class="desc">Susan Harley</div>
+  </div>
+  <div class="gallery">
+    <a target="_blank" href="training Set.ejs">
+      <img src="images/elder02.jpg" alt="Cinque Terre" width="1000" height="600">
+    </a>
+    <div class="desc">Meitu Flamingo</div>
+  </div>
+  <div class="gallery">
+    <a target="_blank" href="training Set.ejs">
+      <img src="images/elder03.jpg" alt="Cinque Terre" width="1000" height="600">
+    </a>
+    <div class="desc">John Holland</div>
+  </div>
+  <div class="gallery">
+    <a target="_blank" href="training Set.ejs">
+      <img src="images/elder04.jpg" alt="Cinque Terre" width="1000" height="600">
+    </a>
+    <div class="desc">Tom Nineteen</div>
+  </div>
+  <div class="gallery">
+    <a target="_blank" href="training Set.ejs">
+      <img src="images/elder05.jpg" alt="Cinque Terre" width="1000" height="600">
+    </a>
+    <div class="desc">Laura Cologne</div>
+  </div>
+  <div class="gallery">
+    <a target="_blank" href="training Set.ejs">
+      <img src="images/elder06.jpg" alt="Cinque Terre" width="1000" height="600">
+    </a>
+    <div class="desc">Mike Burton</div>
+  </div>
+  <div class="gallery" id="elder07">
+    <a target="_blank" href="training Set.ejs">
+      <img src="images/elder07.jpg" name="Image" alt="Cinque Terre" width="1000" height="600" id="pUpImage">
+    </a>
+    <div class="desc">Alissara Rumsrimad</div>
+  </div>
+  <script type="text/javascript">
+    var user = $("#pFName").val();
+    var pwd = $("#pLName").val();
+    var Image = $("#pUpImage").val();
+    $.get("http://localhost:3000/addElder/" +user+ "/" + pwd, function(data,status){
+      
+    });
+
+    document.getElementById("addElderButton").onclick = function () {
+      location.href = "relationalElder";
+    };
+    document.getElementById("elder07").onclick = function () {
+      location.href = "trainingSet";
+    };
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html>
+<title>MEMORIA</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://kit.fontawesome.com/ef115be938.js" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<!--Get your own code at fontawesome.com-->
+<style>
+    .w3-sidebar a {
+        font-family: "Roboto", sans-serif
+    }
+
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    .w3-wide {
+        font-family: "Montserrat", sans-serif;
+    }
+
+    .vl {
+
+        border-left: 4px solid #B0AFB3;
+        height: 50px;
+        margin-left: 70px;
+    }
+
+    html {
+        font-family: sans-serif;
+    }
+
+    form {
+        width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    form ol {
+        padding-left: 0;
+    }
+
+    form li,
+    div>p {
+        background: white;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        list-style-type: none;
+        border: 1px solid black;
+    }
+
+    form img {
+        height: 64px;
+        order: 1;
+    }
+
+    form p {
+        line-height: 32px;
+        padding-left: 10px;
+    }
+
+    form label,
+    form button {
+        background-color: gainsboro;
+        padding: 5px 10px;
+        border-radius: 5px;
+        border: 1px ridge black;
+        font-size: 0.8rem;
+        height: auto;
+    }
+
+    form label:hover,
+    form button:hover {
+        background-color: #2D5BA3;
+        color: white;
+    }
+
+    form label:active,
+    form button:active {
+        background-color: #0D3F8F;
+        color: white;
+    }
+</style>
+
+<body class="w3-content" style="max-width:100%">
+
+    <div class="w3-top">
+        <div class="w3-bar w3-theme-d2 w3-left-align w3-large" style="background:  #004733; color: white;">
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="My Account">
+                <img src="images/logo.png" class="w3-circle" style="height:65px;width:65px" alt="Avatar">
+            </a>
+            <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-theme-d2"
+                href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+            <a href="addElder" class="w3-bar-item w3-button w3-right w3-padding-large w3-theme-d4" title="Home">
+                <i class="fa fa-home w3-margin-right"></i></a>
+            <a href="#" class="w3-bar-item w3-button  w3-right w3-hide-small w3-padding-large w3-hover-white"
+                title="Account Settings"><i class="fa fa-user"></i></a>
+            <a href="#" class="w3-bar-item w3-button  w3-right w3-hide-small w3-padding-large w3-hover-white"
+                title="Messages"><i class="fa fa-envelope"></i></a>
+            <!-- Notification -->
+            <div class="w3-dropdown-hover w3-hide-small w3-right">
+                <button class="w3-button w3-padding-large " title="Notifications"><i class="fa fa-bell"></i><span
+                        class="w3-badge w3-right w3-small w3-green">3</span></button>
+                <div class="w3-dropdown-content w3-card-4 w3-bar-block" style="width:300px">
+                    <a href="#" class="w3-bar-item w3-button">Training Set</a>
+                    <a href="#" class="w3-bar-item w3-button">Training Record</a>
+                    <a href="#" class="w3-bar-item w3-button">Personal Information</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Sidebar/menu -->
+    <nav class="w3-sidebar w3-bar-block w3-white w3-collapse w3-top" style="z-index:3;width:250px; margin-top: 6%;"
+        id="mySidebar">
+
+        <div class="w3-container w3-display-container w3-padding-16">
+            <i onclick="w3_close()" class="fa fa-remove w3-hide-large w3-button w3-display-topright"></i>
+            <h3 class="w3-wide w3-center"><b>MEMORIA</b></h3>
+            <img src="images/profile.jpg" style="width:85%" class="w3-circle w3-hover-opacity"><br><br>
+            <a href="#" class="w3-bar-item w3-button w3-center" style="color: blue;">Alissara Rumsrimad</a>
+        </div>
+        <hr>
+        <div class="w3-padding-50 w3-large w3-text-grey" style="font-weight:bold">
+            <a href="trainingSet" class="w3-bar-item w3-button">Training Set</a>
+            <hr>
+            <a href="trainingRecord" class="w3-bar-item w3-button">Training Record</a>
+            <hr>
+            <a href="personalInformation" class="w3-bar-item w3-button">Personal Information</a>
+        </div>
+        <a href="login" class="w3-bar-item w3-button w3-padding w3-center"
+            style="background-color: #c83e4d; color: white; margin-top: 16%;">Logout</a>
+    </nav>
+
+
+    <!-- Top menu on small screens -->
+    <header class="w3-bar w3-top w3-hide-large w3-xlarge" style="background-color: maroon;">
+        <div class="w3-bar-item w3-padding-24 w3-wide">MEMORIA</div>
+        <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding-24 w3-right" onclick="w3_open()"><i
+                class="fa fa-bars"></i></a>
+    </header>
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu"
+        id="myOverlay"></div>
+
+    <!-- !PAGE CONTENT! -->
+    <div class="w3-main" style="margin-left:250px">
+
+        <!-- Push down content on small screens -->
+        <div class="w3-hide-large" style="margin-top:83px"></div>
+
+        <!-- Top header -->
+        <header class="w3-container w3-xlarge">
+            <p class="w3-center" style="background-color: maroon; color: white;">MEMORIA</p>
+        </header>
+        <div class="w3-center" style="margin-top: 5%;">
+            <h5>Insert Image</h5>
+        </div>
+
+        <!--<div class="">
+                <img src="I.png" class="w3-left w3-margin-right" style="width:60px">
+                <input class="w3-input w3-border " type="url" placeholder="url" name="Photo" style="width: 50%;">-->
+        <!--<input type="file" name="upfile" accept="image/*, audio/*, video/*" required>
+            </div>
+            <br>
+            <img src="I.png" class="w3-left w3-margin-right" style="width:60px">
+            <input class="w3-input w3-border " type="url" placeholder="url" name="Photo" style="width: 50%;">
+            <button
+                style="margin-left: 60%; margin-bottom: -10%; background-color: black; color: white;">Change</button>
+            <div class="w3-clear ">
+            </div>
+        </div>
+        <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom"></button>
+        <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom"></button>-->
+        <div class="w3-container w3-card w3-round w3-margin" style="background-color: #FFE8E8;"><br>
+            <form role="form" method="POST" id="form">
+                <div>
+                    <h6>Choose images to upload</h6>
+                </div>
+                <div class="preview">
+                    <!--<p>No files currently selected for upload</p>-->
+                    <input type="file" id="image_uploads" name="image_uploads"  accept="" multiple>
+                    <!--<label for="image_uploads">Change</label>-->
+                </div>
+                <!--<button>Submit</button>-->
+                <div class="w3-center w3-half">
+
+                    <div class="col-sm-9">
+                        <input class="form-control" type="file" name="uploaded_image" id='uploaded_image' accept="" />
+                    </div>
+
+                    <div class="w3-center">
+                        <input class="w3-button" onclick='handleSubmit()'
+                            style="background-color: black; color: white; margin-top: 5%;" type="submit" value="finish">
+                    </div>
+            </form>
+            
+
+        </div>
+
+
+        <script>
+            const input = document.querySelector('input');
+            const preview = document.querySelector('.preview');
+
+            input.style.opacity = 0;
+
+            input.addEventListener('change', updateImageDisplay);
+
+            function updateImageDisplay() {
+                while (preview.firstChild) {
+                    preview.removeChild(preview.firstChild);
+                }
+
+                const curFiles = input.files;
+                if (curFiles.length === 0) {
+                    const para = document.createElement('p');
+                    para.textContent = 'No files currently selected for upload';
+                    preview.appendChild(para);
+                } else {
+                    const list = document.createElement('ol');
+                    preview.appendChild(list);
+
+                    for (const file of curFiles) {
+                        const listItem = document.createElement('li');
+                        const para = document.createElement('p');
+
+                        if (validFileType(file)) {
+                            para.textContent = `File name ${file.name}, file size ${returnFileSize(file.size)}.`;
+                            const image = document.createElement('img');
+                            image.src = URL.createObjectURL(file);
+
+                            listItem.appendChild(image);
+                            listItem.appendChild(para);
+                        } else {
+                            para.textContent = `File name ${file.name}: Not a valid file type. Update your selection.`;
+                            listItem.appendChild(para);
+                        }
+
+                        list.appendChild(listItem);
+                    }
+                }
+            }
+
+            
+            const fileTypes = [
+                'image/apng',
+                'image/bmp',
+                'image/gif',
+                'image/jpeg',
+                'image/pjpeg',
+                'image/png',
+                'image/svg+xml',
+                'image/tiff',
+                'image/webp',
+                `image/x-icon`
+            ];
+
+            function validFileType(file) {
+                return fileTypes.includes(file.type);
+            }
+
+            function returnFileSize(number) {
+                if (number < 1024) {
+                    return number + 'bytes';
+                } else if (number > 1024 && number < 1048576) {
+                    return (number / 1024).toFixed(1) + 'KB';
+                } else if (number > 1048576) {
+                    return (number / 1048576).toFixed(1) + 'MB';
+                }
+            }
+        </script>
+        <script>
+            function handleSubmit() {
+                let form = document.querySelector('#form')
+                const data = new FormData()
+                form.addEventListener('submit', function (e) {
+                    e.preventDefault()
+                })
+                let datas = Object.values(form).reduce((obj, field) => { obj[field.name] = field.value; return obj }, {})
+                Object.entries(datas).forEach(([key, value]) => data.append(key, value))
+                const uploaded_image = document.getElementById('uploaded_image').files[0]
+                data.append('uploaded_image', uploaded_image)
+                // for (var value of data.values()) {
+                //   console.log('falue', value);
+                // }
+                $('#form').submit(function (e) {
+                    $.ajax({
+                        type: 'POST',
+                        url: "http://localhost:3000/editExercise02/editExercise02",
+                        data: data,
+                        processData: false,
+                        contentType: false
+                    }).done(function (data) {
+                        // ส่งเสร็จให้ขึ้นว่าไร
+                        //alert('test')
+                        alert('Exercise 2 is successfully inserted into the database')
+                        location.href = "/hometour01";
+                    })
+                })
+            }
+        </script>
+
+    </div>
+</body>
+
+</html>

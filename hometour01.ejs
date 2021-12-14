@@ -1,0 +1,169 @@
+<html>
+
+<head>
+  <title>Hometour</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="Drang and Drop.css">
+  <script rel="stylesheet" href="Drang and Drop.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <style>
+    .w3-sidebar a {
+      font-family: "Roboto", sans-serif
+    }
+
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    .w3-wide {
+      font-family: "Montserrat", sans-serif;
+    }
+
+    body {
+      margin: 10px;
+    }
+
+    .glyphicon-move {
+      cursor: move;
+      cursor: -webkit-grabbing;
+    }
+  </style>
+  <!--Get your own code at fontawesome.com-->
+</head>
+
+<body>
+
+  <!-- Latest compiled and minified CSS -->
+
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" />
+  <!-- Latest Sortable -->
+  <script src="https://raw.githack.com/SortableJS/Sortable/master/Sortable.js"></script>
+  <div class="w3-top">
+    <div class="w3-bar w3-theme-d2 w3-left-align w3-large" style="background:  #004733; color: white;">
+
+      <!-- Logo -->
+      <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="My Account">
+        <img src="images/logo.png" class="w3-circle" style="height:65px;width:65px" alt="Avatar">
+      </a>
+
+      <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-theme-d2"
+        href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+
+      <!-- Home -->
+      <a href="addElder" class="w3-bar-item w3-button w3-right w3-padding-large w3-theme-d4" title="Home">
+        <i class="fa fa-home w3-margin-right"></i></a>
+
+      <!-- Account Setting -->
+
+      <a href="#" class="w3-bar-item w3-button  w3-right w3-hide-small w3-padding-large w3-hover-white"
+        title="Account Settings"><i class="fa fa-user"></i></a>
+
+      <!-- Message -->
+
+      <a href="#" class="w3-bar-item w3-button  w3-right w3-hide-small w3-padding-large w3-hover-white"
+        title="Messages"><i class="fa fa-envelope"></i></a>
+
+      <!-- Notification -->
+
+      <div class="w3-dropdown-hover w3-hide-small w3-right">
+        <button class="w3-button w3-padding-large " title="Notifications"><i class="fa fa-bell"></i><span
+            class="w3-badge w3-right w3-small w3-green">3</span></button>
+        <div class="w3-dropdown-content w3-card-4 w3-bar-block" style="width:300px">
+          <a href="#" class="w3-bar-item w3-button">Training Set</a>
+          <a href="#" class="w3-bar-item w3-button">Training Record</a>
+          <a href="#" class="w3-bar-item w3-button">Personal Information</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium w3-large">
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 1</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 2</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 3</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">My Profile</a>
+    <br>
+    <pre>
+         </pre>
+  </div>
+
+
+  <!-- Sidebar/menu -->
+  <nav class="w3-sidebar w3-bar-block w3-white w3-collapse w3-top" style="z-index:3;width:250px; margin-top: 104px;"
+    id="mySidebar">
+
+    <div class="w3-container w3-display-container w3-padding-16">
+      <i onclick="w3_close()" class="fa fa-remove w3-hide-large w3-button w3-display-topright"></i>
+      <h3 class="w3-wide w3-center"><b>MEMORIA</b></h3>
+      <img src="images/profile.jpg" style="width:85%" class="w3-circle w3-hover-opacity"><br><br>
+      <a href="#" class="w3-bar-item w3-button w3-center" style="color: blue;">Alissara Rumsrimad</a>
+    </div>
+    <hr>
+    <div class="w3-padding-50 w3-large w3-text-grey" style="font-weight:bold">
+      <a href="trainingSet" class="w3-bar-item w3-button">Training Set</a>
+      <hr>
+      <a href="trainingRecord" class="w3-bar-item w3-button">Training Record</a>
+      <hr>
+      <a href="personalInformation" class="w3-bar-item w3-button">Personal Information</a>
+    </div>
+    <a href="login" class="w3-bar-item w3-button w3-padding w3-center"
+      style="background-color: #c83e4d; color: white; margin-top: 16%;">Logout</a>
+  </nav>
+  <p>memoria</p>
+  <select class="w3-right" style="margin-top: 10%; margin-right: 5%;">
+    <div class="">
+      <option>+TRAINING SET</option>
+    </div>
+    <div class="" id="">
+      <option>PLACE</option>
+    </div>
+    <option>AUGMENTEL IMAGE</option>
+    <option>FACE RECORDTITION</option>
+  </select>
+  <!-- List with handle -->
+  <div class="w3-center" style="margin-top: 18%;">
+    <div id="simpleList" class="list-group">
+      <div class="list-group-item" style="background-color: maroon; color: white; " id="terraceButton">ระเบียงหน้าบ้าน
+      </div>
+      <div class="list-group-item" style="background-color: maroon; color: white; ">โต๊ะทานอาหาร</div>
+      <div class="list-group-item" style="background-color: maroon; color: white; ">มุมนั่งที่พักผ่อน</div>
+      <div class="list-group-item" style="background-color: maroon; color: white; " id="grandchildButton">
+        หลานคนเล็กของบ้าน</div>
+      <button id="nextButton" class="w3-button w3-large w3-white" style="color:maroon;">Next</button>
+    </div>
+  </div>
+  <script>
+    
+    document.getElementById("nextButton").onclick = function () {
+      location.href = "/addMemoryExercise";
+    };
+    document.getElementById("terraceButton").onclick = function () {
+      location.href = "/editExercise01";
+    };
+    document.getElementById("grandchildButton").onclick = function () {
+      location.href = "/editExercise02";
+    };
+    // Simple list
+    Sortable.create(simpleList, { /* options */ });
+
+    // List with handle
+    Sortable.create(listWithHandle, {
+      handle: '.glyphicon-move',
+      animation: 150
+    });
+  </script>
+
+
+</body>
+
+</html>

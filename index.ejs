@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>MEMORIA</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<style>
+		body,
+		html {
+			height: 100%
+		}
+
+		body,
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+			font-family: "verdana", sans-serif
+		}
+
+		.menu {
+			display: none
+		}
+
+		/* Full height image header */
+		body {
+			background-position: center;
+			background-size: cover;
+			background-color: #004733;
+			min-height: 100%;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="w3-display-middle w3-center" style="color: #FFF0DF;">
+		<span class="w3-hide-small" style="font-size:100px;">Welcome</span>
+		<br>
+		<span class="w3-hide-small" style="font-size:50px">To</span>
+		<br>
+		<span class="w3-hide-small" style="font-size:65px">Memoria</span>
+		<p style="margin-top: 20%;">
+			<button id="nextButton" class="w3-button w3-xlarge" style="color: #FFF0DF; 
+			background-color: #c83e4d; border-radius: 25px; width: 100px; height: 50px;  ">Next</button>
+		</p>
+	</div>
+	<script type="text/javascript">
+		document.getElementById("nextButton").onclick = function () {
+			location.href = "/login";
+		};
+	</script>
+</body>
+
+</html>

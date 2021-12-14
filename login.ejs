@@ -1,0 +1,374 @@
+<html>
+
+<head>
+	<title>MEMORIA</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Bootstrap CDN (Content Delivery Network)-->
+
+	<!-- jQuery CDN -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<link rel="stylesheet">
+	<style>
+		display-middle {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			-ms-transform: translate(-50%, -50%)
+		}
+
+		center {
+			text-align: center;
+			display: inline-block;
+			width: auto;
+			text-align: center !important
+		}
+
+		text-white {
+			color: #fff !important
+		}
+
+		hide-small {
+			display: none !important
+		}
+
+		button {
+			border: none;
+			display: inline-block;
+			padding: 8px 16px;
+			vertical-align: middle;
+			overflow: hidden;
+			text-decoration: none;
+			color: inherit;
+			background-color: inherit;
+			text-align: center;
+			cursor: pointer;
+			white-space: nowrap
+		}
+
+		button {
+			-webkit-touch-callout: none;
+			-webkit-user-select: none;
+			-khtml-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+			user-select: none
+		}
+
+		button:disabled {
+			cursor: not-allowed;
+			opacity: 0.3
+		}
+
+		.w3-disabled *,
+		:disabled * {
+			pointer-events: none
+		}
+
+		button:first-child {
+			background-color: #ccc;
+			color: #000
+		}
+
+		button {
+			width: 100%;
+			text-align: left;
+			padding: 8px 16px
+		}
+
+		button {
+			white-space: normal
+		}
+
+		button {
+			width: 100%
+		}
+
+		button:hover {
+			color: #000 !important;
+			background-color: #ccc !important
+		}
+
+		text-xxlarge {
+			font-size: 36px !important
+		}
+
+		text-white {
+			color: #000 !important;
+			background-color: #fff !important
+		}
+
+		* {
+			box-sizing: border-box
+		}
+
+		/* style the container */
+		.container {
+			position: relative;
+			background-color: gainsboro;
+			padding: 20px 0 30px 0;
+		}
+
+		/* style inputs and link buttons */
+		input,
+		.btn {
+			width: 100%;
+			padding: 12px;
+			border: none;
+			border-radius: 4px;
+			margin: 5px 0;
+			opacity: 0.85;
+			display: inline-block;
+			font-size: 17px;
+			line-height: 20px;
+			text-decoration: none;
+			/* remove underline from anchors */
+		}
+
+		input:hover,
+		.btn:hover {
+			opacity: 1;
+		}
+
+		/* add appropriate colors to fb, twitter and google buttons */
+		.fb {
+			background-color: #3B5998;
+			color: white;
+		}
+
+		.twitter {
+			background-color: #55ACEE;
+			color: white;
+		}
+
+		.google {
+			background-color: #dd4b39;
+			color: white;
+		}
+
+		.btnLogin {
+			background-color: black;
+			color: white;
+		}
+
+		/* style the submit button */
+		input[type=submit] {
+			background-color: maroon;
+			color: white;
+			cursor: pointer;
+		}
+
+		input[type=submit]:hover {
+			background-color: maroon;
+		}
+
+		/* Two-column layout */
+		.col {
+			float: left;
+			width: 50%;
+			margin: auto;
+			padding: 0 50px;
+			margin-top: 6px;
+		}
+
+		/* Clear floats after the columns */
+		.row:after {
+			content: "";
+			display: table;
+			clear: both;
+		}
+
+		/* vertical line */
+		.vl {
+			position: absolute;
+			left: 50%;
+			transform: translate(-50%);
+			border: 2px solid #ddd;
+			height: 175px;
+		}
+
+		/* text inside the vertical line */
+		.inner {
+			position: absolute;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			background-color: #f1f1f1;
+			border: 1px solid #ccc;
+			border-radius: 50%;
+			padding: 8px 10px;
+		}
+
+		/* hide some text on medium and large screens */
+		.hide-md-lg {
+			display: none;
+		}
+
+		/* bottom container */
+		.bottom-container {
+			text-align: center;
+			background-color: gainsboro;
+			border-radius: 0px 0px 4px 4px;
+		}
+
+		/* Responsive layout - when the screen is less than 650px wide, make the two columns stack on top of each other instead of next to each other */
+		@media screen and (max-width: 650px) {
+			.col {
+				width: 100%;
+				margin-top: 0;
+			}
+
+			/* hide the vertical line */
+			.vl {
+				display: none;
+			}
+
+			/* show the hidden text on small screens */
+			.hide-md-lg {
+				display: block;
+				text-align: center;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<div class="w3-top">
+		<div class="w3-bar w3-theme-d2 w3-left-align w3-large" style="background: #004733; color: white;">
+			<a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="My Account">
+				<img src="images/logo.png" class="w3-circle" style="height:65px;width:65px" alt="Avatar">
+			</a>
+			<a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-theme-d2"
+				href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+
+		</div>
+		<div class="container">
+			<form role="form" method="GET">
+				<div class="row">
+					<h2 style="text-align:center" style="background-color: maroon; color: white;">Login</h2>
+					<div class="vl">
+						<span class="vl-innertext">or</span>
+					</div>
+					<div class="col">
+						<a href="https://www.facebook.com/" class="fb btn">
+							<i class="fa fa-facebook fa-fw"></i> Login with Facebook
+						</a>
+						<a href="https://twitter.com/i/flow/login" class="twitter btn">
+							<i class="fa fa-twitter fa-fw"></i> Login with Twitter
+						</a>
+						<a href="https://accounts.google.com/AccountChooser/signinchooser?flowName=GlifWebSignIn&flowEntry=AccountChooser" class="google btn">
+							<i class="fa fa-google fa-fw"></i> Login with Google+
+						</a>
+					</div>
+					<div class="col">
+						<div class="hide-md-lg">
+							<p>Or sign in manually:</p>
+						</div>
+						<input type="text" name="uname" id="uname" placeholder="Username">
+						<input type="password" name="pwd" id="pwd" placeholder="Password">
+						<button type="button" style="background-color: #c83e4d; height:50px; 
+					color: #fff; text-align: center; font-size: 95%;">Next</button>
+
+					</div>
+
+				</div>
+			</form>
+		</div>
+		<div class="bottom-container">
+			<div class="row">
+				<div class="col">
+					<a href="createAccount" class="btnLogin btn">
+						<i class=""></i> Create Account
+					</a>
+				</div>
+				<div class="col">
+					<a href="#" class="btnLogin btn">
+						<i class=""></i> Forgot password?
+					</a>
+					<pre>
+				</div>
+			</div>
+		</div>
+		<!--<div id="result" style="margin:20px; color:blue;"></div>-->
+
+		<script>
+			$(document).ready(function () {			     // รับค่า user และ password จากผู้ใช้กรอกบน Web Browser (Chrome)
+				$("button").click(function () {		    // ตรวจสอบค่า user และ password ที่มีในระบบ phpMyAdmin -> Database ว่าตรงกับที่ผู้ใช้กรอกเข้ามาหรือไม่
+					var uname = $("#uname").val();
+					var pwd = $("#pwd").val();
+					$.get("http://localhost:3000/login/" + uname + "/" + pwd, function (data, status) {
+						if (data.result == 1) {
+							//$("#result");
+							alert("You have successfully logged into Memoria Website");			     // Login success	        
+							location.href = "/addElder";
+						} else {
+							//$("#result")
+							alert("Please check your username and password");		// Login not success
+						}
+					});
+				});
+			});
+		</script>
+</body>
+
+</html>
+
+<!--
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>
+		<%= title %>
+	</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">-->
+<!-- Bootstrap CDN (Content Delivery Network)-->
+<!--<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">-->
+<!-- jQuery CDN -->
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+	<div class="container-fluid">
+		<h1>Sign-in page</h1>
+		<form role="form" method="GET">
+			<div class="form-group">
+				<label for="tem">User:</label>
+				<input type="text" class="form-control" name="uname" id="uname">
+			</div>
+			<div class="form-group">
+				<label for="pwd">Password:</label>
+				<input type="text" class="form-control" name="pwd" id="pwd">
+			</div>
+			<button type="button" class="btn btn-primary">Sign-in</button>
+		</form>
+	</div>
+	<div id="result" style="margin:10px; color:red;"></div>
+
+	<script>
+		$(document).ready(function () {			     // รับค่า user และ password จากผู้ใช้กรอกบน Web Browser (Chrome)
+			$("button").click(function () {		    // ตรวจสอบค่า user และ password ที่มีในระบบ phpMyAdmin -> Database ว่าตรงกับที่ผู้ใช้กรอกเข้ามาหรือไม่
+				var uname = $("#uname").val();
+				var pwd = $("#pwd").val();
+				$.get("http://localhost:3000/login/" + uname + "/" + pwd, function (data, status) {
+					if (data.result == 1) {
+						$("#result");
+						alert("You have successfully logged into Memoria Website");		 // Login success
+						location.href = "/addElder";
+					} else {
+						$("#result").html("<br> Please check user and password inputted!");		    	// Login not success
+					}
+				});
+			});
+		});
+
+		// Test at Chrome Web Server -> http://localhost:3000/
+
+	</script>
+
+</body>
+
+</html>-->
